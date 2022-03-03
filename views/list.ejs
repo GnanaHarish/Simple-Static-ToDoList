@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fredoka:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="dateTime">
+    <p> Hi! Today is <%= todaysDay %> </p>
+  </div>
+
+
+  <div class="box">
+    <form class="toDo" action="/toDoForm" method="post">
+
+
+      <% for(let count = 0; count < filler.length; count++ ){ %>
+      <% if(count != 0){ %>
+      <hr>
+      <% } %>
+      <input type="checkbox" name="checkbox" value="">
+      <label for="myinput" class="indented-checkbox-text"> <%= filler[count] %> </label>
+      <br>
+
+      <% } %>
+  </div>
+
+
+  <div class="enterValue">
+
+    <input type="text" id="textBox" name="itemName" value="" placeholder="Enter your Task">
+    <button type="submit" name="submitButton">+</button>
+  </div>
+  </form>
+
+
+</body>
+
+</html>
